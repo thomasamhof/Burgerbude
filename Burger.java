@@ -57,13 +57,17 @@ public abstract class Burger {
     public abstract void verarbeitung();
     
     public  String verpacken(){
-        String ausgabe =String.format("\nName: %s\nBroetchen: %s\nSauce: %s\nBratling: %s\nZutaten: ",getName(), getBrot(),getSauce(),getBrat());
+        String ausgabe = String.format("\nName: %s\nBroetchen: %s\nSauce: %s\nBratling: %s\nZutaten: ",getName(), getBrot(),getSauce(),getBrat());
         
         for (String x : toppings) {
-            ausgabe = ausgabe.concat(x+",");
+            ausgabe = ausgabe.concat(x+", ");
         }
+
+        ausgabe = (ausgabe.substring(0,ausgabe.length()-2)).concat(String.format("\nKosten: %.2f",kosten()));
         
         return ausgabe+"\n";
     }
+
+    public abstract double kosten();
     
 }

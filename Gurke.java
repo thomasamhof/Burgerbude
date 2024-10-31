@@ -14,4 +14,9 @@ public class Gurke extends BurgerDecorator {
     public  void verarbeitung(){
         toppings.add("Gurke");
     };
+
+    @Override
+    public double kosten(){
+        return decBurger.kosten()+0.2;
+    }
 }

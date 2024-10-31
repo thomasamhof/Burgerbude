@@ -18,4 +18,9 @@ public class Chickenburger extends Burger{
         toppings.add("Tomate");
         toppings.add("Zwiebeln");
     }
+
+    @Override
+    public double kosten(){
+        return 4.5;
+    }
 }

@@ -12,4 +12,9 @@ public class Zwiebeln extends BurgerDecorator {
     public  void verarbeitung(){
         toppings.add("Zwiebeln");
     };
+
+    @Override
+    public double kosten(){
+        return decBurger.kosten()+0.2;
+    }
 }

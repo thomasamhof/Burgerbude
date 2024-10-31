@@ -17,4 +17,9 @@ public class Cheeseburger extends Burger{
         toppings.add("Gurke");
         toppings.add("Kaese");
     }
+
+    @Override
+    public double kosten(){
+        return 4.5;
+    }
 }

@@ -14,4 +14,9 @@ public class Tomate extends BurgerDecorator {
     public  void verarbeitung(){
         toppings.add("Tomate");
     };
+
+    @Override
+    public double kosten(){
+        return decBurger.kosten()+0.3;
+    }
 }

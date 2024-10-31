@@ -11,9 +11,14 @@ public class Hamburger extends Burger{
     }
     
     @Override
-    public  void verarbeitung(){
+    public void verarbeitung(){
         setBrat(brat);
         setSauce(soße.KetchupUndSenf);
         toppings.add("Gurke");
+    }
+
+    @Override
+    public double kosten(){
+        return 4.0;
     }
 }

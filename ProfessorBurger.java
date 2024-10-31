@@ -23,4 +23,9 @@ public class ProfessorBurger extends Burger{
         toppings.add("Gurke");
         toppings.add("Bacon");
     }
+
+    @Override
+    public double kosten(){
+        return 6.5;
+    }
 }

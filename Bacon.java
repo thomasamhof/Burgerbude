@@ -1,7 +1,3 @@
-
-
-
-
 public class Bacon extends BurgerDecorator {
 
     
@@ -20,5 +16,9 @@ public class Bacon extends BurgerDecorator {
     public  void verarbeitung(){
         toppings.add("Bacon");
     };
-    
+
+    @Override
+    public double kosten(){
+        return decBurger.kosten()+0.5;
+    }
 }

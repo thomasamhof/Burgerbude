@@ -14,4 +14,9 @@ public class Relish extends BurgerDecorator {
     public  void verarbeitung(){
         toppings.add("Relish");
     };
+
+    @Override
+    public double kosten(){
+        return decBurger.kosten()+0.4;
+    }
 }
