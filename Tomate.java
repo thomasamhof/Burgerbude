@@ -1,16 +1,10 @@
-
-
-
 public class Tomate extends BurgerDecorator {
-
-    
     public Tomate(Burger burger){
         super(burger);
         
         vorbereiten();
     }
-    
-    
+
     @Override
     public void vorbereiten(){
         verarbeitung();
@@ -20,5 +14,4 @@ public class Tomate extends BurgerDecorator {
     public  void verarbeitung(){
         toppings.add("Tomate");
     };
-    
 }

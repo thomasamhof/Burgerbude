@@ -1,9 +1,4 @@
-
-
-
-
 public class Cheeseburger extends Burger{
-    
     public Cheeseburger (){
         vorbereiten();
     }
@@ -21,10 +16,5 @@ public class Cheeseburger extends Burger{
         setSauce(soße.KetchupUndSenf);
         toppings.add("Gurke");
         toppings.add("Kaese");
-        
     }
-    
-  
-    
-    
 }

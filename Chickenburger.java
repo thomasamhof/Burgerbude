@@ -1,8 +1,4 @@
-
-
-
 public class Chickenburger extends Burger{
-    
     public Chickenburger (){
         vorbereiten();
     }
@@ -21,9 +17,5 @@ public class Chickenburger extends Burger{
         toppings.add("Salat");
         toppings.add("Tomate");
         toppings.add("Zwiebeln");
-        
     }
-    
- 
-    
 }

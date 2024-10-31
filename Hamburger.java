@@ -1,9 +1,4 @@
-
-
-
-
 public class Hamburger extends Burger{
-    
     public Hamburger (){
         vorbereiten();
     }
@@ -20,10 +15,5 @@ public class Hamburger extends Burger{
         setBrat(brat);
         setSauce(soße.KetchupUndSenf);
         toppings.add("Gurke");
-        
     }
-    
-
-    
-    
 }

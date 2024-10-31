@@ -1,7 +1,3 @@
-
-
-
-
 public class ProfessorBurger extends Burger{
     
     public ProfessorBurger (){
@@ -26,10 +22,5 @@ public class ProfessorBurger extends Burger{
         toppings.add("Relish");
         toppings.add("Gurke");
         toppings.add("Bacon");
-        
-        
     }
-    
- 
-    
 }

@@ -1,16 +1,8 @@
-
-
-
-
 public class Zwiebeln extends BurgerDecorator {
-
-    
     public Zwiebeln(Burger burger){
         super(burger);
         vorbereiten();
     }
-    
-    
     @Override
     public  void vorbereiten(){
         verarbeitung();
@@ -20,5 +12,4 @@ public class Zwiebeln extends BurgerDecorator {
     public  void verarbeitung(){
         toppings.add("Zwiebeln");
     };
-    
 }

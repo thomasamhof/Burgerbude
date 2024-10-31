@@ -1,17 +1,10 @@
-
-
-
-
 public class Relish extends BurgerDecorator {
-
-    
     public Relish(Burger burger){
         super(burger);
         
         vorbereiten();
     }
-    
-    
+
     @Override
     public void vorbereiten(){
         verarbeitung();
@@ -21,5 +14,4 @@ public class Relish extends BurgerDecorator {
     public  void verarbeitung(){
         toppings.add("Relish");
     };
-    
 }

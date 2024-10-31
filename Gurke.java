@@ -1,16 +1,10 @@
-
-
-
 public class Gurke extends BurgerDecorator {
-
-    
     public Gurke(Burger burger){
         super(burger);
 
         vorbereiten();
     }
-    
-    
+
     @Override
     public void vorbereiten(){
         verarbeitung();
@@ -20,5 +14,4 @@ public class Gurke extends BurgerDecorator {
     public  void verarbeitung(){
         toppings.add("Gurke");
     };
-    
 }
