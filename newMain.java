@@ -1,8 +1,7 @@
 public class newMain {
-
     public static void main(String[] args) {
-       BurgerBude nbg=new BurgerBudeFleisch(new BurgerBude("Nuernberg"));
-       BurgerBude erl = new BurgerBudeVegan(new BurgerBude("Erlangen"));
+       BurgerBude nbg = BurgerBudeFleisch.getInstance(new BurgerBude("Nuernberg"));
+       BurgerBude erl = BurgerBudeVegan.getInstance(new BurgerBude("Erlangen"));
        
        nbg.bestelleBurger(new Bacon(new Relish(new Chickenburger())));
        nbg.bestelleBurger(new Tomate(new Gurke(new Cheeseburger())));
@@ -15,5 +14,4 @@ public class newMain {
        nbg.fertigeBurger();
        erl.fertigeBurger();
     }
-    
 }
