@@ -1,7 +1,10 @@
 public class Tomate extends BurgerDecorator {
-    public Tomate(Burger burger){
+    public Tomate(Burger burger) {
         super(burger);
-        
+    }
+
+    public Tomate(Burger burger, boolean toppingHinzugefuegt) {
+        super(burger, toppingHinzugefuegt);
         vorbereiten();
     }
 
@@ -12,11 +15,18 @@ public class Tomate extends BurgerDecorator {
     
     @Override
     public  void verarbeitung(){
-        toppings.add("Tomate");
+        if (toppingHinzugefuegt) {
+            toppings.add("Tomate");
+        } else {
+            toppings.remove("Tomate");
+        }
     };
 
     @Override
     public double kosten(){
-        return decBurger.kosten()+0.3;
+        if (toppingHinzugefuegt)
+            return decBurger.kosten() + 0.3;
+        else
+            return decBurger.kosten();
     }
 }

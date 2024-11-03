@@ -1,22 +1,32 @@
 public class Gurke extends BurgerDecorator {
-    public Gurke(Burger burger){
+    public Gurke(Burger burger) {
         super(burger);
+    }
 
+    public Gurke(Burger burger, boolean toppingHinzugefuegt) {
+        super(burger, toppingHinzugefuegt);
         vorbereiten();
     }
 
     @Override
     public void vorbereiten(){
         verarbeitung();
-        }
+    }
     
     @Override
     public  void verarbeitung(){
-        toppings.add("Gurke");
+        if (toppingHinzugefuegt) {
+            toppings.add("Gurke");
+        } else {
+            toppings.remove("Gurke");
+        }
     };
 
     @Override
     public double kosten(){
-        return decBurger.kosten()+0.2;
+        if (toppingHinzugefuegt)
+            return decBurger.kosten() + 0.3;
+        else
+            return decBurger.kosten();
     }
 }
