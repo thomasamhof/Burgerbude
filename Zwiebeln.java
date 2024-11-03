@@ -1,6 +1,7 @@
 public class Zwiebeln extends BurgerDecorator {
     public Zwiebeln(Burger burger) {
         super(burger);
+        vorbereiten();
     }
     
     public Zwiebeln(Burger burger, boolean toppingHinzugefuegt) {

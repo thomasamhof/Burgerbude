@@ -1,6 +1,7 @@
 public class Tomate extends BurgerDecorator {
     public Tomate(Burger burger) {
         super(burger);
+        vorbereiten();
     }
 
     public Tomate(Burger burger, boolean toppingHinzugefuegt) {

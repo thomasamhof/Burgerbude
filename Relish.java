@@ -1,6 +1,7 @@
 public class Relish extends BurgerDecorator {
     public Relish(Burger burger) {
         super(burger);
+        vorbereiten();
     }
     
     public Relish(Burger burger, boolean toppingHinzugefuegt) {

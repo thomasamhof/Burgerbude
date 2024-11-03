@@ -3,7 +3,7 @@ public class BurgerFactory {
     public Burger erstelleBurger(String name) {
         if (name.equalsIgnoreCase("ham")) 
             return new Hamburger();
-        else if (name.equalsIgnoreCase("cheeese"))
+        else if (name.equalsIgnoreCase("cheese"))
             return new Cheeseburger();
         else if (name.equalsIgnoreCase("chicken"))
             return new Chickenburger();

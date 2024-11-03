@@ -194,12 +194,12 @@ public class GUI extends JFrame{
                 // Hamburger ausgewählt
                 tempBurger=null;
                 tempBurger = BurgerFabrik.erstelleBurger(e.getActionCommand());
-                taAusgabe.setText(String.format("%s\n\n%s", tempBb.getStandort(),tempBurger.verpacken()));
+                taAusgabe.setText(String.format("%s\n%s", tempBb.getStandort(),tempBurger.verpacken()));
 
             }
             else {
                 tempBurger = BurgerFabrik.belegeBurger(e.getActionCommand(), tempBurger);
-                taAusgabe.setText(String.format("%s\n\n%s", tempBb.getStandort(),tempBurger.verpacken()));
+                taAusgabe.setText(String.format("%s\n%s", tempBb.getStandort(),tempBurger.verpacken()));
             }
         }
 

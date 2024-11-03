@@ -1,6 +1,7 @@
 public class Gurke extends BurgerDecorator {
     public Gurke(Burger burger) {
         super(burger);
+        vorbereiten();
     }
 
     public Gurke(Burger burger, boolean toppingHinzugefuegt) {
