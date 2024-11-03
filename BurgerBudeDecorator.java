@@ -4,5 +4,6 @@ public abstract class BurgerBudeDecorator extends BurgerBude {
     public BurgerBudeDecorator(BurgerBude burgerBude){
         this.decBurgerBude = burgerBude;
         this.standort = burgerBude.getStandort();
+        this.bestellungen = burgerBude.bestellungen;
     }
 }
