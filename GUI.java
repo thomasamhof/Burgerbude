@@ -213,12 +213,12 @@ public class GUI extends JFrame {
                     taAusgabe.setText(tempBb.getStandort());
                 } else if (e.getActionCommand().equals("bestellen")) {
                     // ausgewählter Burger wird der Bestellliste hinzugefügt
-                    try {
+                    if (tempBurger!=null){
                         tempBb.bestelleBurger(tempBurger);
                         taAusgabe.setText(tempBurger.getName() + " der Bestellung hinzugefuegt");
                         tempBb.setGeskosten(tempBb.getGeskosten() + tempBurger.kosten());
                         tempBurger=null;
-                    } catch (NullPointerException npe) {
+                    } else {
                         taAusgabe.setText("kein Burger ausgewaehlt");
                     }
 
