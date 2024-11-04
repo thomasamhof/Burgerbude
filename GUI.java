@@ -186,6 +186,7 @@ public class GUI extends JFrame {
         bBmin.addActionListener(zuhoerer);
         bBmin.setActionCommand("b-");
 
+        //Text Area zur Ausgabe
         taAusgabe = new JTextArea("Ihre Bestellung");
         // Position unterhalb der Zutaten-Buttons (bei zweiteReiheY + 100)
         taAusgabe.setBounds(50, zweiteReiheY + 100, 600, 250);
