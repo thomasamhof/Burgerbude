@@ -1,6 +1,11 @@
 public class Zwiebeln extends BurgerDecorator {
-    public Zwiebeln(Burger burger){
+    public Zwiebeln(Burger burger) {
         super(burger);
+        vorbereiten();
+    }
+    
+    public Zwiebeln(Burger burger, boolean toppingHinzugefuegt) {
+        super(burger, toppingHinzugefuegt);
         vorbereiten();
     }
     @Override
@@ -10,11 +15,18 @@ public class Zwiebeln extends BurgerDecorator {
     
     @Override
     public  void verarbeitung(){
-        toppings.add("Zwiebeln");
+        if (toppingHinzugefuegt) {
+            toppings.add("Zwiebeln");
+        } else {
+            toppings.remove("Zwiebeln");
+        }
     };
 
     @Override
     public double kosten(){
+        if (toppingHinzugefuegt)
         return decBurger.kosten()+0.2;
+        else
+        return decBurger.kosten();
     }
 }

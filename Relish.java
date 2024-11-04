@@ -1,22 +1,33 @@
 public class Relish extends BurgerDecorator {
-    public Relish(Burger burger){
+    public Relish(Burger burger) {
         super(burger);
-        
+        vorbereiten();
+    }
+    
+    public Relish(Burger burger, boolean toppingHinzugefuegt) {
+        super(burger, toppingHinzugefuegt);
         vorbereiten();
     }
 
     @Override
     public void vorbereiten(){
         verarbeitung();
-        }
+    }
     
     @Override
     public  void verarbeitung(){
-        toppings.add("Relish");
+        if (toppingHinzugefuegt) {
+            toppings.add("Relish");
+        } else {
+            toppings.remove("Relish");
+        }
     };
 
     @Override
     public double kosten(){
-        return decBurger.kosten()+0.4;
+        if (toppingHinzugefuegt)
+            return decBurger.kosten() + 0.3;
+        else
+            return decBurger.kosten();
     }
 }
