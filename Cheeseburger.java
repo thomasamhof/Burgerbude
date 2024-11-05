@@ -12,7 +12,7 @@ public class Cheeseburger extends Burger{
     
     @Override
     public  void verarbeitung(){
-        setBrat(brat);
+        setBrat(bratling.Einfach);
         setSauce(soße.KetchupUndSenf);
         toppings.add("Gurke");
         toppings.add("Kaese");

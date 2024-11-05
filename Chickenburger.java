@@ -12,7 +12,7 @@ public class Chickenburger extends Burger{
     
     @Override
     public  void verarbeitung(){
-        setBrat(brat);
+        setBrat(bratling.Haehnchen);
         setSauce(soße.Barbecue);
         toppings.add("Salat");
         toppings.add("Tomate");

@@ -8,6 +8,7 @@ public abstract class BurgerDecorator extends Burger {
         this.brot = burger.brot;
         this.sauce = burger.sauce;
         this.toppings = burger.toppings;
+        this.brat = burger.brat;
     }
 
     public BurgerDecorator(Burger burger, boolean toppingHinzugefuegt){
@@ -17,6 +18,7 @@ public abstract class BurgerDecorator extends Burger {
         this.brot = burger.brot;
         this.sauce = burger.sauce;
         this.toppings = burger.toppings;
+        this.brat = burger.brat;
     }
     
     @Override

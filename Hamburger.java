@@ -12,7 +12,7 @@ public class Hamburger extends Burger{
     
     @Override
     public void verarbeitung(){
-        setBrat(brat);
+        setBrat(bratling.Einfach);
         setSauce(soße.KetchupUndSenf);
         toppings.add("Gurke");
     }

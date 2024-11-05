@@ -92,7 +92,7 @@ public class GUI extends JFrame {
         bRmin.setBounds(startX + 60, zweiteReiheY + 25, 50, 30);
 
         // Käse
-        lKaese = new JLabel("Käse");
+        lKaese = new JLabel("Kaese");
         lKaese.setBounds(startX + abstandX, zweiteReiheY, 100, 20);
         bKplus.setBounds(startX + abstandX, zweiteReiheY + 25, 50, 30);
         bKmin.setBounds(startX + abstandX + 60, zweiteReiheY + 25, 50, 30);

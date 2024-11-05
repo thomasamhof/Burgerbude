@@ -17,9 +17,9 @@ public class Kaese extends BurgerDecorator {
     @Override
     public  void verarbeitung(){
         if (toppingHinzugefuegt) {
-            toppings.add("Käse");
+            toppings.add("Kaese");
         } else {
-            toppings.remove("Käse");
+            toppings.remove("Kaese");
         }
     };
 
