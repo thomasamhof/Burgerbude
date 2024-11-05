@@ -19,6 +19,9 @@ public class GUI extends JFrame {
         c.setLayout(null);
         this.setSize(900, 800);
         this.setLocationRelativeTo(null);
+        this.setTitle("Burgerbude");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setResizable(false);
 
         // Burger-Auswahl Buttons (oben)
         bBudeErl = new JButton("BurgerBude Erlangen");
@@ -200,7 +203,6 @@ public class GUI extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
-
                 if (e.getActionCommand().equals("erl")) {
                     // Burgerbude Erlangen ausgewählt
                     tempBb = bbErl;
@@ -221,7 +223,6 @@ public class GUI extends JFrame {
                     } else {
                         taAusgabe.setText("kein Burger ausgewaehlt");
                     }
-
                 } else if (e.getActionCommand().equals("fertige")) {
                     // alle Burger der Liste werden gefertigt und eine Zusammenfassung als Dialog ausgegeben
                     JDialog d = new JDialog();
@@ -251,13 +252,10 @@ public class GUI extends JFrame {
                     } catch (NullPointerException npe) {
                         taAusgabe.setText("kein Burger ausgewaehlt");
                     }
-
                 }
             } catch (Exception ex) {
                 taAusgabe.setText("keine BurgerBude ausgewaehlt");
             }
         }
-
     }
-
 }
