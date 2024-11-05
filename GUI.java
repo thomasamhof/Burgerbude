@@ -8,7 +8,6 @@ public class GUI extends JFrame {
     BurgerBude bbErl = BurgerBudeVegan.getInstance(new BurgerBude("Erlangen"));
     BurgerBude bbNbg = BurgerBudeFleisch.getInstance(new BurgerBude("Nuernberg"));
     BurgerBude tempBb;
-    BurgerFactory BurgerFabrik = new BurgerFactory();
     Container c;
     JLabel label;
     JTextArea taAusgabe;
@@ -242,12 +241,12 @@ public class GUI extends JFrame {
                 } else if (e.getActionCommand().equals("ham") || e.getActionCommand().equals("cheese")
                         || e.getActionCommand().equals("chicken") || e.getActionCommand().equals("prof")) {
                     // einer der Burger ausgewählt
-                    tempBurger = BurgerFabrik.erstelleBurger(e.getActionCommand());
+                    tempBurger = BurgerFactory.getInstance().erstelleBurger(e.getActionCommand());
                     taAusgabe.setText(String.format("%s\n%s", tempBb.getStandort(), tempBurger.verpacken()));
                 } else {
                     // Topping ausgewählt
                     try {
-                        tempBurger = BurgerFabrik.belegeBurger(e.getActionCommand(), tempBurger);
+                        tempBurger = BurgerFactory.getInstance().belegeBurger(e.getActionCommand(), tempBurger);
                         taAusgabe.setText(String.format("%s\n%s", tempBb.getStandort(), tempBurger.verpacken()));
                     } catch (NullPointerException npe) {
                         taAusgabe.setText("kein Burger ausgewaehlt");

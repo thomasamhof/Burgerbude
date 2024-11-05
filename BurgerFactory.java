@@ -1,4 +1,9 @@
 public class BurgerFactory {
+    private static BurgerFactory BurgerFabrik = new BurgerFactory();
+
+    public static BurgerFactory getInstance(){
+        return BurgerFabrik;
+    }
 
     public Burger erstelleBurger(String name) {
         if (name.equalsIgnoreCase("ham")) 
