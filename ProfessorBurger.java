@@ -1,5 +1,4 @@
 public class ProfessorBurger extends Burger{
-    
     public ProfessorBurger (){
         vorbereiten();
     }

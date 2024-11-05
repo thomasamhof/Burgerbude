@@ -3,14 +3,14 @@ import java.util.ArrayList;
 public abstract class Burger {
     protected String name = "";
     protected enum soße { KetchupUndSenf, Barbecue, ScharfUndKnoblauch };
-    soße sauce = soße.KetchupUndSenf;
-    ArrayList<String> toppings=new ArrayList<>();
+    protected soße sauce = soße.KetchupUndSenf;
+    protected ArrayList<String> toppings=new ArrayList<>();
 
     protected enum broetchen { Brioche, Vollkorn, keinBroetchen };
-    broetchen brot = broetchen.Brioche;
+    protected broetchen brot = broetchen.Brioche;
     
     protected enum bratling { Einfach, Doppelt, Haehnchen };
-    bratling brat = bratling.Einfach;
+    protected bratling brat = bratling.Einfach;
 
     public String getName() {
         return name;

@@ -4,14 +4,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class GUI extends JFrame {
-    Burger tempBurger;
-    BurgerBude bbErl = BurgerBudeVegan.getInstance(new BurgerBude("Erlangen"));
-    BurgerBude bbNbg = BurgerBudeFleisch.getInstance(new BurgerBude("Nuernberg"));
-    BurgerBude tempBb;
-    Container c;
-    JLabel label;
-    JTextArea taAusgabe;
-    JButton bBudeErl, bBudeNbg, bHam, bCheese, bChicken, bProf, bTplus, bTmin, bZplus, bZmin, bGplus, bGmin, bRplus,
+    private Burger tempBurger;
+    private BurgerBude bbErl = BurgerBudeVegan.getInstance(new BurgerBude("Erlangen"));
+    private BurgerBude bbNbg = BurgerBudeFleisch.getInstance(new BurgerBude("Nuernberg"));
+    private BurgerBude tempBb;
+    private Container c;
+    private JLabel lZwiebel, lTomate, lBacon, lGurke, lRelish, lKaese;
+    private JTextArea taAusgabe;
+    private JButton bBudeErl, bBudeNbg, bHam, bCheese, bChicken, bProf, bTplus, bTmin, bZplus, bZmin, bGplus, bGmin, bRplus,
             bRmin, bKplus, bKmin, bBplus, bBmin, bBestellen, bFertige;
 
     public GUI() {
@@ -63,19 +63,19 @@ public class GUI extends JFrame {
 
         // Erste Reihe: Tomate, Zwiebel, Gurke
         // Tomate
-        JLabel lTomate = new JLabel("Tomate");
+        lTomate = new JLabel("Tomate");
         lTomate.setBounds(startX, startY, 100, 20);
         bTplus.setBounds(startX, startY + 25, 50, 30);
         bTmin.setBounds(startX + 60, startY + 25, 50, 30);
 
         // Zwiebel
-        JLabel lZwiebel = new JLabel("Zwiebel");
+        lZwiebel = new JLabel("Zwiebel");
         lZwiebel.setBounds(startX + abstandX, startY, 100, 20);
         bZplus.setBounds(startX + abstandX, startY + 25, 50, 30);
         bZmin.setBounds(startX + abstandX + 60, startY + 25, 50, 30);
 
         // Gurke
-        JLabel lGurke = new JLabel("Gurke");
+        lGurke = new JLabel("Gurke");
         lGurke.setBounds(startX + abstandX * 2, startY, 100, 20);
         bGplus.setBounds(startX + abstandX * 2, startY + 25, 50, 30);
         bGmin.setBounds(startX + abstandX * 2 + 60, startY + 25, 50, 30);
@@ -84,19 +84,19 @@ public class GUI extends JFrame {
         int zweiteReiheY = startY + 100;
 
         // Relish
-        JLabel lRelish = new JLabel("Relish");
+        lRelish = new JLabel("Relish");
         lRelish.setBounds(startX, zweiteReiheY, 100, 20);
         bRplus.setBounds(startX, zweiteReiheY + 25, 50, 30);
         bRmin.setBounds(startX + 60, zweiteReiheY + 25, 50, 30);
 
         // Käse
-        JLabel lKaese = new JLabel("Käse");
+        lKaese = new JLabel("Käse");
         lKaese.setBounds(startX + abstandX, zweiteReiheY, 100, 20);
         bKplus.setBounds(startX + abstandX, zweiteReiheY + 25, 50, 30);
         bKmin.setBounds(startX + abstandX + 60, zweiteReiheY + 25, 50, 30);
 
         // Bacon
-        JLabel lBacon = new JLabel("Bacon");
+        lBacon = new JLabel("Bacon");
         lBacon.setBounds(startX + abstandX * 2, zweiteReiheY, 100, 20);
         bBplus.setBounds(startX + abstandX * 2, zweiteReiheY + 25, 50, 30);
         bBmin.setBounds(startX + abstandX * 2 + 60, zweiteReiheY + 25, 50, 30);
@@ -240,11 +240,11 @@ public class GUI extends JFrame {
                     tempBb.setGeskosten(0);
                 } else if (e.getActionCommand().equals("ham") || e.getActionCommand().equals("cheese")
                         || e.getActionCommand().equals("chicken") || e.getActionCommand().equals("prof")) {
-                    // einer der Burger ausgewählt
+                    // einer der Burger ausgewaehlt, Konstruktor wird über Factory aufgerufen
                     tempBurger = BurgerFactory.getInstance().erstelleBurger(e.getActionCommand());
                     taAusgabe.setText(String.format("%s\n%s", tempBb.getStandort(), tempBurger.verpacken()));
                 } else {
-                    // Topping ausgewählt
+                    // Topping ausgewählt, Konstruktor wird über Factory aufgerufen
                     try {
                         tempBurger = BurgerFactory.getInstance().belegeBurger(e.getActionCommand(), tempBurger);
                         taAusgabe.setText(String.format("%s\n%s", tempBb.getStandort(), tempBurger.verpacken()));

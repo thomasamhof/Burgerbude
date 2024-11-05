@@ -1,6 +1,4 @@
 public class Bacon extends BurgerDecorator {
-
-    
     public Bacon(Burger burger){
         super(burger);
         vorbereiten();
