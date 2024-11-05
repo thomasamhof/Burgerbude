@@ -20,7 +20,6 @@ public class GUI extends JFrame {
         this.setSize(900, 800);
         this.setLocationRelativeTo(null);
         this.setTitle("Burgerbude");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
 
         // Burger-Auswahl Buttons (oben)
