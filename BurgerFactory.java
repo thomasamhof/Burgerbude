@@ -1,8 +1,14 @@
 public class BurgerFactory {
-    private static BurgerFactory BurgerFabrik = new BurgerFactory();
+    private static BurgerFactory burgerFabrik = null;
 
-    public static BurgerFactory getInstance(){
-        return BurgerFabrik;
+    private BurgerFactory() {}
+
+    public static BurgerFactory getInstance() {
+        if (burgerFabrik == null) {
+            burgerFabrik = new BurgerFactory();
+        }
+
+        return burgerFabrik;
     }
 
     public Burger erstelleBurger(String name) {
