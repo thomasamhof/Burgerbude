@@ -12,13 +12,13 @@ public class BurgerFactory {
     }
 
     public Burger erstelleBurger(String name) {
-        if (name.equalsIgnoreCase("ham")) 
+        if (name.equalsIgnoreCase("hamburger")) 
             return new Hamburger();
-        else if (name.equalsIgnoreCase("cheese"))
+        else if (name.equalsIgnoreCase("cheeseburger"))
             return new Cheeseburger();
-        else if (name.equalsIgnoreCase("chicken"))
+        else if (name.equalsIgnoreCase("chickenburger"))
             return new Chickenburger();
-        else if (name.equalsIgnoreCase("prof"))
+        else if (name.equalsIgnoreCase("professorburger"))
             return new ProfessorBurger();
         else 
             return null;

@@ -144,13 +144,13 @@ public class GUI extends JFrame {
         bBudeNbg.addActionListener(zuhoerer);
         bBudeNbg.setActionCommand("nbg");
         bHam.addActionListener(zuhoerer);
-        bHam.setActionCommand("ham");
+        bHam.setActionCommand("hamburger");
         bCheese.addActionListener(zuhoerer);
-        bCheese.setActionCommand("cheese");
+        bCheese.setActionCommand("cheeseburger");
         bChicken.addActionListener(zuhoerer);
-        bChicken.setActionCommand("chicken");
+        bChicken.setActionCommand("chickenburger");
         bProf.addActionListener(zuhoerer);
-        bProf.setActionCommand("prof");
+        bProf.setActionCommand("professorburger");
         bBestellen.addActionListener(zuhoerer);
         bBestellen.setActionCommand("bestellen");
         bFertige.addActionListener(zuhoerer);
@@ -238,8 +238,8 @@ public class GUI extends JFrame {
                     tempBb.bestellungen.clear();
                     tempBurger = null;
                     tempBb.setGeskosten(0);
-                } else if (e.getActionCommand().equals("ham") || e.getActionCommand().equals("cheese")
-                        || e.getActionCommand().equals("chicken") || e.getActionCommand().equals("prof")) {
+                } else if (e.getActionCommand().equals("hamburger") || e.getActionCommand().equals("cheeseburger")
+                        || e.getActionCommand().equals("chickenburger") || e.getActionCommand().equals("professorburger")) {
                     // einer der Burger ausgewaehlt, Konstruktor wird über Factory aufgerufen
                     tempBurger = BurgerFactory.getInstance().erstelleBurger(e.getActionCommand());
                     taAusgabe.setText(String.format("%s\n%s", tempBb.getStandort(), tempBurger.verpacken()));

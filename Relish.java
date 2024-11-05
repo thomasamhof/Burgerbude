@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Relish extends BurgerDecorator {
     public Relish(Burger burger) {
         super(burger);
@@ -16,18 +18,26 @@ public class Relish extends BurgerDecorator {
     
     @Override
     public  void verarbeitung(){
-        if (toppingHinzugefuegt) {
+        ArrayList<String> standardZutaten = BurgerFactory.getInstance().erstelleBurger(decBurger.getName()).toppings;
+        String zutat = this.getClass().getName();
+
+        if (toppingHinzugefuegt){
             toppings.add("Relish");
+            // es wird geprüft, ob die zutat bereits auf dem standard burger war oder manuell hinzugefügt wurde
+            manuellErgaenzt = (decBurger.toppings.contains(zutat) && !standardZutaten.contains(zutat) || standardZutaten.contains(zutat) && decBurger.toppings.indexOf(zutat)!=decBurger.toppings.lastIndexOf(zutat)) ? true : false;
         } else {
+            manuellErgaenzt = (decBurger.toppings.contains(zutat) && !standardZutaten.contains(zutat) || standardZutaten.contains(zutat) && decBurger.toppings.indexOf(zutat)!=decBurger.toppings.lastIndexOf(zutat)) ? true : false;
             toppings.remove("Relish");
         }
     };
 
     @Override
     public double kosten(){
-        if (toppingHinzugefuegt)
-            return decBurger.kosten() + 0.3;
+        if (toppingHinzugefuegt && manuellErgaenzt)
+            return decBurger.kosten()+0.3;
+        else if (manuellErgaenzt)
+            return decBurger.kosten()-0.3;
         else
-            return decBurger.kosten();
+        return decBurger.kosten();
     }
 }
